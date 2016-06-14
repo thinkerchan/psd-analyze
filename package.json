@@ -1,0 +1,23 @@
+{
+  "name": "psd-analyze",
+  "version": "0.0.2",
+  "description": "psd-analyze",
+  "main": "index.js",
+  "scripts": {
+    "test": "psd"
+  },
+  "bin": { "psd": "bin/psd.js" },
+  "keywords": [
+    "psd"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:thinkerchan/psd-analyze.git"
+  },
+  "author": "thinkerchan",
+  "dependencies":{
+    "psd":"3.1.0",
+    "yargs":"4.7.1"
+  },
+  "license": "ISC"
+}
