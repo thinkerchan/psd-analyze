@@ -1,8 +1,11 @@
 # psd-analyze
 psd-analyze
 
+## 安装
+	npm install psd-analyze -g
+
 ## 语法
-  psd -n psd名称(不需要后缀)
+ 	psd -n psd名称(不需要后缀)
 
 ## 示例
 ![示例](http://ww2.sinaimg.cn/large/006y8lVagw1f779n1024zj30di02ywen.jpg)
