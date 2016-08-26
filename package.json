@@ -1,6 +1,6 @@
 {
   "name": "psd-analyze",
-  "version": "0.0.2",
+  "version": "0.2.5",
   "description": "psd-analyze",
   "main": "index.js",
   "scripts": {
