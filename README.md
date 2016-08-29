@@ -6,6 +6,8 @@ psd-analyze
 
 ## 语法
  	psd -n psd名称(不需要后缀)
+## PSD结构要求
+![PSD结构要求](http://ww4.sinaimg.cn/large/65e4f1e6gw1f7ad2a0vd0j20cw0k2my4.jpg)
 
 ## 示例
 ![示例](http://ww2.sinaimg.cn/large/006y8lVagw1f779n1024zj30di02ywen.jpg)
