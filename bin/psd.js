@@ -7,20 +7,28 @@ var argv = require('yargs')
 var exec = require('child_process').exec;
 var fs=require('fs'),
     PSD = require('psd'),
-    psdName = argv.n;
+    psdName = argv.n,
+    _scale = argv.s;
+
+
 var psd = PSD.fromFile("psd/"+psdName+".psd");
     psd.parse();
+
 var data = psd.tree().export();
+
 var css = '',
     html='',
     imgSrc='images/',
     prefix = '',
     suffix = '';
+
+var scale = _scale||1;
 for (var i = data.children.length - 1; i >= 0; i--) {
   var el = data.children[i] ;
-  css += '.'+el.name+'{position:absolute;'+'width:'+el.width+'px; '+'height:'+el.height+'px; '+'top:'+el.top+'px; '+'left:'+el.left+'px; '+'z-index:0; }'+'\n';
+  css += '.'+el.name+'{position:absolute;'+'width:'+(el.width*scale)+'px; '+'height:'+(el.height*scale)+'px; '+'top:'+(el.top*scale)+'px; '+'left:'+(el.left*scale)+'px; '+'z-index:0; }'+'\n';
   html+='<div class='+'"'+el.name+'"'+'><img src='+'"'+prefix+imgSrc+el.name+suffix+'.png"'+'></div>'+'\n';
 }
+
 exec('cd psd && mkdir '+psdName,
   function (error, stdout, stderr) {
     PSD.open("psd/"+psdName+".psd").then(function (psd) {
